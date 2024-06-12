@@ -24,4 +24,20 @@ h1{
     border: solid;
     padding: 50px;
     box-sizing: border-box;
+    justify-content: space-between;
+}
+
+.panel {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-panel{
+    width: 250px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.right{
+    justify-content: end;
 }
