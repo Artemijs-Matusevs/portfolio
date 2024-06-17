@@ -32,12 +32,24 @@ h1{
     flex-direction: column;
 }
 
-.project-panel{
-    width: 250px;
-    height: 50px;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
 .right{
     justify-content: end;
+}
+
+
+/* Socials */
+.contact{
+    margin-top: auto;
+}
+
+.contact ul{
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 50px;
+}
+
+.contact ul li{
+    font-size: 50px;
 }
