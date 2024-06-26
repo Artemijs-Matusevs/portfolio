@@ -4,7 +4,7 @@
 }
 
 h1{
-    color: red;
+    color: #59716f;
 }
 
 #main-body{
@@ -15,18 +15,32 @@ h1{
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
+    background-image: url(../images/spaceman.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 0;
 }
 
 #inner-body{
     display: flex;
     height: 100%;
     width: 100%;
-    border: solid;
     padding: 50px;
     box-sizing: border-box;
     justify-content: space-between;
+    z-index: 1;
 }
 
+
+/* Background details */
+
+
+
+
+ 
+
+ 
 
 
 
