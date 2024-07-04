@@ -45,7 +45,34 @@
         </div>
 
         <!-- Background Details -->
-        <div class="explosion"> </div>
+         <div class="smoke-container">
+            <div class="smoke"></div>
+            <div class="smoke"></div>
+            <div class="smoke"></div>
+        </div>
+
+        <div class="smoke-container smoke-container-2">
+            <div class="smoke"></div>
+            <div class="smoke"></div>
+            <div class="smoke"></div>
+        </div>
     </div>
 </body>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const smokes = document.querySelectorAll(".smoke");
+
+        smokes.forEach(smoke => {
+            const riseDuration = (Math.random() * 5 + 3).toFixed(2); 
+            const driftDuration = (Math.random() * 5 + 3).toFixed(2);
+
+            smoke.style.animation = `rise ${riseDuration}s infinite, drift ${driftDuration}s infinite`;
+
+            const delay = (Math.random() * 2).toFixed(2);
+            smoke.style.animationDelay = `${delay}s`
+        })
+    })
+</script>
+
 </html>
