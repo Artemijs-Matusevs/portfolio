@@ -5,6 +5,16 @@
 
 h1{
     color: #59716f;
+    font-size: 50px;
+}
+
+h2{
+    color: grey;
+}
+
+p{
+    color: grey;
+    font-size: 26px;
 }
 
 #main-body{
@@ -153,6 +163,7 @@ h1{
 /* Socials */
 .contact{
     margin-top: auto;
+    color: grey;
 }
 
 .contact ul{
@@ -165,6 +176,10 @@ h1{
 
 .contact ul li{
     font-size: 50px;
+}
+
+.contact ul li:hover{
+    cursor: pointer;
 }
 
 
