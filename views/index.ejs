@@ -43,35 +43,23 @@
                 </div>
             </div>
         </div>
-
-        <!-- Background Details -->
-         <div class="smoke-container">
-            <div class="smoke"></div>
-            <div class="smoke"></div>
-            <div class="smoke"></div>
-        </div>
-
-        <div class="smoke-container smoke-container-2">
-            <div class="smoke"></div>
-            <div class="smoke"></div>
-            <div class="smoke"></div>
-        </div>
     </div>
 </body>
 
 <script>
     document.addEventListener("DOMContentLoaded", () => {
-        const smokes = document.querySelectorAll(".smoke");
 
-        smokes.forEach(smoke => {
-            const riseDuration = (Math.random() * 5 + 3).toFixed(2); 
-            const driftDuration = (Math.random() * 5 + 3).toFixed(2);
+        const numDots = 50;
+        const container = document.querySelector('#main-body');
 
-            smoke.style.animation = `rise ${riseDuration}s infinite, drift ${driftDuration}s infinite`;
-
-            const delay = (Math.random() * 2).toFixed(2);
-            smoke.style.animationDelay = `${delay}s`
-        })
+        for (let i = 0; i < numDots; i++) {
+            const dot = document.createElement('div');
+            dot.classList.add('dot');
+            dot.style.top = Math.random() * 100 + 'vh';
+            dot.style.left = Math.random() * 100 + 'vw';
+            dot.style.animationDuration = (Math.random() * 20 + 10) + 's';
+            container.appendChild(dot);
+        }
     })
 </script>
 

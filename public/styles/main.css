@@ -30,6 +30,7 @@ p{
     background-size: cover;
     position: absolute;
     z-index: 0;
+    overflow: hidden;
 }
 
 #inner-body{
@@ -43,71 +44,59 @@ p{
 }
 
 
-/* Background details */
-.smoke-container{
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    bottom: 10vh;
-    left: 5vw;
+ 
+
+/* Background dots */
+@keyframes moveDots {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(100vw, 100vh);
+    }
 }
 
-.smoke-container-2{
+.dot {
     position: absolute;
-    width: 200px;
-    height: 200px;
-    top: 10vh;
-    left: 75vw;
-}
-
-.smoke{
-    position: absolute;
-    bottom: 0;
-    width: 300px;
-    height: 300px;
-    background: radial-gradient(circle, rgba(255,255,255,0.5) 0%, rgba(0,0,0,0) 70%);
+    width: 5px;
+    height: 5px;
+    background-color: grey;
     border-radius: 50%;
-    opacity: 0;
+    opacity: 0.5;
+    animation: moveDots linear infinite;
+    z-index: -1;
 }
 
-.smoke:nth-child(2) {
-    width: 150px;
-    height: 150px;
-  }
-  
-  .smoke:nth-child(3) {
-    width: 100px;
-    height: 100px;
-  }
+.dot:nth-child(1) {
+    top: 20%;
+    left: 30%;
+    animation-duration: 10s;
+}
 
-  @keyframes rise {
-    0% {
-        transform: translateY(0) scale(1);
-        opacity: 0.5;
-      }
-      50% {
-        opacity: 0.3;
-      }
-      100% {
-        transform: translateY(-300px) scale(1.5);
-        opacity: 0;
-      }
-    }
-  
-  @keyframes drift {
-    0% {
-        transform: translateX(0);
-      }
-      50% {
-        transform: translateX(-50px);
-      }
-      100% {
-        transform: translateX(50px);
-      }
-    }
- 
+.dot:nth-child(2) {
+    top: 50%;
+    left: 70%;
+    animation-duration: 15s;
+}
 
- 
+.dot:nth-child(3) {
+    top: 80%;
+    left: 20%;
+    animation-duration: 20s;
+}
+
+.dot:nth-child(4) {
+    top: 10%;
+    left: 50%;
+    animation-duration: 12s;
+}
+
+.dot:nth-child(5) {
+    top: 40%;
+    left: 90%;
+    animation-duration: 18s;
+}
+
 
 
 
